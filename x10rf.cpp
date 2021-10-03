@@ -216,7 +216,7 @@ void x10rf::SendCommand(uint8_t *data, uint8_t size){
 			SendX10RfByte(data[i]);
 		}
 	SendX10RfBit(1); 
-	delayMicroseconds(X10_RF_GAP);
+	delay(X10_RF_GAP/1000);
 	}
 	if (_led_pin > 0) digitalWrite(_led_pin, LOW); 
 }
