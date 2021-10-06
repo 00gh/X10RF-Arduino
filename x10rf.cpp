@@ -212,7 +212,7 @@ void x10rf::SendCommand(uint8_t *data, uint8_t size){
 	for (int i = 0; i < _rf_repeats; i++){
 		SEND_HIGH();delayMicroseconds(X10_RF_SB_LONG); 
 		SEND_LOW();delayMicroseconds(X10_RF_SB_SHORT); 
-		for(int i=0; i <= size; i++) {
+		for(int i=0; i < size; i++) {
 			SendX10RfByte(data[i]);
 		}
 	SendX10RfBit(1); 
